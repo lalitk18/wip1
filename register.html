@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="bootstrap\css\bootstrap.css" >
+<link rel="stylesheet" href="bootstrap\css\bootstrap.min.css" >
+<link rel="stylesheet" href="bootstrap\css\bootstrap-theme.css" >
+<link rel="stylesheet" href="bootstrap\css\bootstrap-theme.min.css" > 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+  
+  <script>
+	function init()
+{
+	var day=1;
+	var month=1;
+	var year=1990;
+	
+	var z = parseInt(document.getElementById('selectcombod').value);	
+	var como1= document.getElementById('selectcomboy'); 
+	for(var year=1990; year<2017; year++)
+	{
+		var opt = document.createElement("option");
+		opt.text = year;
+		como1.add(opt);
+	}
+	
+	
+	var  combo3= document.getElementById('selectcombom');
+	for(var month=1; month<13; month++)
+	{
+		var opt = document.createElement("option");
+		
+		opt.text = month;
+		
+		combo3.add(opt);
+		
+	}
+	
+	
+		
+	}
+	
+		
+			function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#blah')
+        .attr('src', e.target.result)
+        .width(150)
+        .height(200);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+			
+		
+	
+		function filldd()
+	{
+		var length=document.getElementById('selectcombod').options.length;
+		
+		for(var i=length-1; i>=1;i-- )
+		{
+			document.getElementById('selectcombod').remove(i);   
+		}
+		
+		var yy1 = document.getElementById('selectcomboy').selectedIndex;
+		var mm1 = document.getElementById('selectcombom').selectedIndex;
+		var y=mm1;
+		var x=document.getElementById('selectcomboy').options[yy1].text;
+		var  combo2= document.getElementById('selectcombod');
+	if(x%4)
+	{
+		if(y == 1 || y == 3|| y == 5|| y == 7|| y == 8|| y == 10|| y == 12   )
+		{
+			
+		for(var day=1; day<=31; day++)
+		{
+		
+			var opt = document.createElement("option");
+			opt.text = day;
+			combo2.add(opt);
+		}
+		
+		
+			
+		}
+		else if (y == 2)
+		{
+			for(var day=1; day<=28; day++)
+		{
+		
+			var opt = document.createElement("option");
+			opt.text = day;
+			combo2.add(opt);
+		}
+		
+		
+			
+		}
+		else
+		{
+			for(var day=1; day<31; day++)
+		{
+		
+			var opt = document.createElement("option");
+			opt.text = day;
+			combo2.add(opt);
+		}
+		
+		
+		}
+
+	}
+
+	else
+	{
+		
+		if(y == 1 || y == 3|| y == 5|| y == 7|| y == 8|| y == 10|| y == 12 )
+		{
+		  	
+			
+		for(var day=1; day<32; day++)
+		{
+		
+			var opt = document.createElement("option");
+			opt.text = day;
+			combo2.add(opt);
+		}
+		
+		
+			
+		}
+		else if (y == 2)
+		{
+			for(var day=1; day<30; day++)
+		{
+		
+			var opt = document.createElement("option");
+			opt.text = day;
+			combo2.add(opt);
+		}
+		
+					
+		}
+		
+		else
+		{
+			for(var day=1; day<31; day++)
+		
+			{
+		
+			var opt = document.createElement("option");
+			opt.text = day;
+			combo2.add(opt);
+			
+			}
+		
+		
+			
+		}
+
+	}
+	
+		
+	}
+	
+</script>
+
+</head>
+
+		
+
+
+
+
+ 
+  
+  
+<body onload="init()">
+     
+	<div id="headfirst">
+    	<div id="logo" >
+        	<img src="LOGO-lw-scaled.JPEG.png" />
+        </div>
+	</div>
+
+	<div class="container">
+
+		<div id="formdiv">
+    		<form action="register.php" method="post" enctype="multipart/form-data">
+			<div id="caption">    
+
+				<caption><h1>Sign up </h1><h5>Its free and always will be. </h5> </caption>
+
+			</div>
+    	
+    		<table id="table" >
+        	
+            	<tr>
+            		<td>
+                		<p> First Name:</p>
+                	</td>
+                
+                	<td>
+                		<input type="text"  name="txname" class="input" >
+                	</td>
+                
+            	</tr>
+            	
+            	<tr>
+            		<td>
+                		<p> Last Name:</p>
+                	</td>
+                	<td>
+                		<input type="text"  name="txnamel" class="input" >
+                	</td>
+            	</tr>
+            
+            	<tr> 
+            		<td>
+               			<p> Your email:</p>
+                	</td>
+                	<td>
+                		<input type="text" name="txemail1" class="input" >
+                	</td>
+            	
+            	</tr>
+        	
+
+        		<tr> 
+            		<td>
+                		<p>  Re-enter   your email:</p>
+                	</td>
+                	
+                	<td>
+                		<input type="text"  name="txemail2" class="input" >
+                	</td>
+        		</tr>
+        	
+        		<tr>
+        			<td>
+           				<p> your password:</p>
+            		</td>
+            		
+            		<td>
+            			<input type="password" name="txpass" class="input" >
+            		</td>
+        		</tr>
+            
+            	<tr>
+            		<td>
+                		<p> gender: </p>
+                	</td>
+                
+                	<td>
+                		<select id="male-female" name="gender"> <option> choose </option> <option>male </option><option>female</option></select>           
+                	</td>
+            
+            	</tr>
+        	
+        		<tr>
+            		<td>
+                		<p> Choose Birth Date: </p>
+                	</td>
+                
+                	<td>
+                		<select id="selectcomboy" name="cbyy"  onchange="filldd()"><option>YYYY</option></select>
+                		<select id="selectcombom"  name="cbmm" onchange="filldd()"><option>MM </option>	</select>
+                		<select id="selectcombod"  name="cbdd"> <option>DD </option>	</select>
+                	</td>
+                
+       	    	</tr>
+            
+            	<tr>
+            		<td colspan="2">
+                		<input type="submit" value="Sign Up" id="signupbutton"  >
+                	</td>
+            	</tr>
+        	</table>
+    
+    	</form>
+
+ 		<div id="caption2">  <caption >  </caption>	    
+ 		</div>
+    	
+    	</div>
+
+	
+	</div>  
+    
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
