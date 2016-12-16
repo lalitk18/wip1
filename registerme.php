@@ -8,6 +8,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 
+<style >  
+
+#container
+{
+
+
+	margin-top: 4%;
+
+
+
+
+}
+#table
+{
+
+
+
+
+}
+
+
+</style>
   
   <script>
 	function init()
@@ -179,25 +201,49 @@
  
   
   
-<body onload="init()">
+<body onload="init()" background="bgcover.jpg">
      
-	<div id="headfirst">
-    	<div id="logo" >
-        	<img src="LOGO-lw-scaled.JPEG.png" />
+	
+    	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WIP</a>
         </div>
-	</div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Registration</a></li>
+            <li><a href="#about">Login</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
 
-	<div class="container">
+	<div class="container" id="container">
 
-		<div id="formdiv">
-    		<form action="register.php" method="post" enctype="multipart/form-data">
-			<div id="caption">    
+		<div id="formdiv" >
+    		<form class="form" action= "<?php echo $_SERVER['PHP_SELF']; ?>"  method="post" enctype="multipart/form-data">
+			<div id="caption" class="page-header text-center"  >    
 
-				<caption><h1>Sign up </h1><h5>Its free and always will be. </h5> </caption>
+				<caption ><h1 style="color: 	#DCDCDC">Registration </h1></caption>
 
 			</div>
-    	
-    		<table id="table" >
+			<div class="row">
+			
+			<div class="col-md-4 col-xs-0 col-sm-4 col-lg-4">
+			</div>
+
+			
+    		<div  class="col-md-4 col-xs-12 col-sm-4 col-lg-4">
+    		<table id="table" class="table  table-condensed text-center" style="color: #3B5998;" >
         	
             	<tr>
             		<td>
@@ -205,7 +251,7 @@
                 	</td>
                 
                 	<td>
-                		<input type="text"  name="txname" class="input" >
+                		<input type="text" placeholder="Enter First Name " name="txname" class="input" >
                 	</td>
                 
             	</tr>
@@ -215,7 +261,7 @@
                 		<p> Last Name:</p>
                 	</td>
                 	<td>
-                		<input type="text"  name="txnamel" class="input" >
+                		<input type="text" placeholder="Enter First Name "  name="txnamel" class="input" >
                 	</td>
             	</tr>
             
@@ -224,7 +270,7 @@
                			<p> Your email:</p>
                 	</td>
                 	<td>
-                		<input type="text" name="txemail1" class="input" >
+                		<input type="text" placeholder="Enter Email Id " name="txemail1" class="input" >
                 	</td>
             	
             	</tr>
@@ -236,7 +282,7 @@
                 	</td>
                 	
                 	<td>
-                		<input type="text"  name="txemail2" class="input" >
+                		<input type="text" placeholder="Confirm Email Id "  name="txemail2" class="input" >
                 	</td>
         		</tr>
         	
@@ -246,7 +292,7 @@
             		</td>
             		
             		<td>
-            			<input type="password" name="txpass" class="input" >
+            			<input type="password" placeholder="Enter Password " name="txpass" class="input" >
             		</td>
         		</tr>
             
@@ -276,15 +322,20 @@
             
             	<tr>
             		<td colspan="2">
-                		<input type="submit" value="Sign Up" id="signupbutton"  >
+                		
+                		<input type="submit" value="Sign Up" id="signupbutton" onclick="frm.action='register.php'"  class="btn btn-sm btn-primary"  >
                 	</td>
             	</tr>
         	</table>
+        	</div>
+        	<div class="col-md-4 col-xs-0 col-sm-4 col-lg-4">
+			</div>
+			</div>
+
     
     	</form>
 
- 		<div id="caption2">  <caption >  </caption>	    
- 		</div>
+ 		
     	
     	</div>
 
